@@ -16,9 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", Router);
 
 const PORT = process.env.PORT || 5000;
-const USERNAME = process.env.DB_USER;
-const PASSWORD = process.env.DB_PASSWORD;
-Connection(USERNAME, PASSWORD);
+const DATABASE = process.env.DATABASE;
+Connection(DATABASE);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
